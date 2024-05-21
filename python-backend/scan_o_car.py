@@ -3,7 +3,7 @@
 def getnumber():
     from PIL import Image
     # Opens a image in RGB mode
-    im = Image.open(r"C:\Users\daksh\Desktop\Captured\car.png")
+    im = Image.open(r"Captured\car.png")
 
     # Setting the points for cropped image
     left = 180
@@ -16,13 +16,13 @@ def getnumber():
     im1 = im.crop((left, top, right, bottom))
 
     # Shows the image in image viewer
-    im1.save(r"C:\Users\daksh\Desktop\Licence Plate\samplesfinal\cropped\car.png")
+    im1.save(r"Licence Plate\samplesfinal\cropped\car.png")
 
     import cv2
     from PIL import Image
 
-    im = Image.open(r"C:\Users\daksh\Desktop\Licence Plate\samplesfinal\cropped\car.png")
-    img = cv2.imread(r"C:\Users\daksh\Desktop\Licence Plate\samplesfinal\cropped\car.png")
+    im = Image.open(r"Licence Plate\samplesfinal\cropped\car.png")
+    img = cv2.imread(r"Licence Plate\samplesfinal\cropped\car.png")
     mser = cv2.MSER_create()
 
     #Resize the image so that MSER can work better
@@ -36,7 +36,7 @@ def getnumber():
     hulls = [cv2.convexHull(p.reshape(-1, 1, 2)) for p in regions[0]]
     cv2.polylines(vis, hulls, 1, (0,255,0))
 
-    im.save(r"C:\Users\daksh\Desktop\Licence Plate\samplesfinal\segmented\car.png")
+    im.save(r"Licence Plate\samplesfinal\segmented\car.png")
 
 
     try:
@@ -53,7 +53,7 @@ def getnumber():
         text = pytesseract.image_to_string(Image.open((im)), lang = 'eng')  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
         return text
 
-    value = (ocr_core((r"C:\Users\daksh\Desktop\Licence Plate\samplesfinal\segmented\car.png")))
+    value = (ocr_core((r"Licence Plate\samplesfinal\segmented\car.png")))
 
 
     def removespace(string):
