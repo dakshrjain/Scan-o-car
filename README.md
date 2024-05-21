@@ -1,2 +1,5 @@
 # Scan-o-car
-Using various technologies, in this project, we designed and created a system which helps us to detect and recognize a vehicle license plate. Recognition of a vehicle license  plate is usually important for many security and control systems.
+Using various technologies, in this project, we designed and created a system which helps us to detect and recognize a vehicle license plate. Recognition of a vehicle license  plate is usually important for many security and control systems. This process involves five major steps, i.e., Localization, Gray Scale Conversion, Character Segmentation, Character Recognition and finally Validation. 
+
+Using the web we get the input and process the license plate’s through Python backend, as mentioned above it’s done in 5 steps Localizing the Number Plate by cropping the area where the license plate is present,further that image is converted into gray scale for converting the image to 0’s and 1’s i.e. binary. After which the characters are segmented so that it can be individually identified in the next process where we retrieve the value to the license plate as a string. This string is then provided back to the web for verifying the string. And according to the results of the validation the instructions are provided to the security official to take the next step.
+
