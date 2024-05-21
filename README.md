@@ -45,7 +45,7 @@ Once the web portal receives the text back it verifies with the local database w
 2. MySQL
 3. PHP
 4. XAMPP
-5. HTML5 and CSS3
+5. HTML and CSS
 6. Pycharm CE
 
 **Conclusion**
